@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Including latest updates of coffee">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tacoshop, coffeecenter, coffeebar, coffee">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="navcontainer">
+        <nav>
+            <img src="image/logo.png" class="logopic" alt="caffe_logo">
+            <a href="#about">About</a>&nbsp;
+            <a href="#ourmenu">Our Menu</a>&nbsp;
+            <a href="#storehours">Store Hours</a>&nbsp;
+            <a href="#contact">Contact us</a>
+            
+        
+        </nav>
+    </header>
+    <h1>Welcome to The Little Taco Shop</h1>
+    <main>
+          <article>
+            <section class="intro-section">
+                <h2>Freshly Brewed Coffee & Homemade Cakes</h2>
+                <div class="intro">
+                    <p>We offer a wide range of delicious, freshly brewed coffees and homemade cakes. Prepared daily with love and premium ingredients.<br>Whether you're catching up with friends or grabbing a quick bite we’ve got something for everyone.</p>
+                </div>
+                <div class="Explore">
+             
+                      <button type="button" id="bt1" class="explorebtn">Explore more</button>
+                </div>
+            </section>
+          </article>
+          
+          <article class="slide">
+            <section class="carousel-section">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn left">&#10094;</button>
+                <div class="carousel-container">
+                  <div class="carousel-track">
+                    <!-- Clone last slide for seamless start -->
+                    <img src="image/iced.jpg" alt="Iced Coffee" class="carousel-image">
+                    
+
+                    <!-- Actual slides -->
+                    <img src="image/coffee.jpg" alt="New Coffee" class="carousel-image">
+                    <img src="image/cc.jpg" alt="Cake Variety" class="carousel-image">
+                    <img src="image/latte.jpg" alt="Latte Art" class="carousel-image">
+                    <img src="image/chocc.jpg" alt="Chocolate Cake" class="carousel-image">
+                    <img src="image/iced.jpg" alt="Iced Coffee" class="carousel-image">
+
+                    <!-- Clone first slide for seamless end -->
+                    <img src="image/coffee.jpg" alt="New Coffee" class="carousel-image">
+                  </div>
+                </div>
+                <button class="carousel-btn right">&#10095;</button>
+              </div>
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+              </div>
+            </section>
+          </article>
+
+            <section id="about" class="intro-section">
+                <h2>About Us</h2>
+                <img src="image/coffee.jpeg" alt="Coffee">
+                <img src="image/cake.jpg" alt="Coffee_Cake">
+                <img src="image/icecoffee.jpg" alt="ice_coffee">
+                <div class="intro">
+                  <p>
+                    Founded in 2020, <strong>The Little Coffee & Cake Shop</strong> has grown into a warm and welcoming haven for coffee lovers and dessert enthusiasts alike. <br> Nestled in the heart of the community, we pride ourselves on crafting every cup and slice with care. <br> Our coffee is brewed from hand-selected, ethically sourced beans, roasted to perfection for a rich and aromatic experience. <br> Every cake is homemade with premium ingredients, ensuring a delightful balance of flavor and freshness.</p>
+                </div>
+
+            </section>
+            <!--Ourmenu-->
+            <section id="ourmenu" class="content-section">
+                <div class="card menu-card animate-on-scroll">
+                  <h2>Our Menu</h2>
+                  <ul>
+                    <li><strong>Espresso</strong> - Rs. 400</li>
+                    <li><strong>Cappuccino</strong> - Rs. 500</li>
+                    <li><strong>Mocha</strong> - Rs. 550</li>
+                    <li><strong>Chocolate Cake</strong> - Rs. 600</li>
+                    <li><strong>Red Velvet Cake</strong> - Rs. 650</li>
+                  </ul>
+                </div>
+              </section>
+             <!--Ourmenuend-->
+             <!--Storehours-->
+            <section id="storehours" class="content-section">
+                <div class="card store-hours-card">
+                  <h2>Store Hours</h2>
+                  <table>
+                    <tr><td>Monday - Friday</td><td>8:00 AM - 8:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>9:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>10:00 AM - 6:00 PM</td></tr>
+                  </table>
+                </div>
+              </section>
+              <!--Storehoursend-->
+        
+            <section class="form-container" id="contact">
+                <h2>Contact Us</h2>
+                <form action="https://httpbin.org/get" method="post" enctype="application/x-www-form-urlencoded">
+                  <label for="name">Full Name</label>
+                  <input type="text" name="fname" id="name" placeholder="Type Your Name" required>
+                  <label for="post">Email</label>
+                  <input type="text" name="email" id="post" placeholder="Type Your Email" required>
+                  <label for="tnum">Phone Number</label>
+                  <input type="tel" name="cno" id="tnum" placeholder="Type Your Number" required>
+                  <label for="subject">Message</label>
+                  <textarea name="content" id="subject" cols="25" rows="15" placeholder="Type Your Message..." required></textarea>
+                  <div class="buttonarea">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                  </div>
+                </form>
+            </section>
+        </main>
+      
+        <footer>
+          <p>&copy; 2025 The Little Coffee & Cake Shop. All rights reserved.</p>
+        </footer>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const images = document.querySelectorAll('.carousel-image');
+  const btnLeft = document.querySelector('.carousel-btn.left');
+  const btnRight = document.querySelector('.carousel-btn.right');
+
+  const slideCount = images.length;
+  const imageWidth = images[0].clientWidth + 20;
+
+  let index = 1; // Start from 1 because 0 is cloned last
+  let interval;
+
+  // Position carousel at the first real image
+  track.style.transform = `translateX(-${imageWidth * index}px)`;
+
+  function moveToSlide(idx) {
+    track.style.transition = 'transform 0.6s ease-in-out';
+    track.style.transform = `translateX(-${imageWidth * idx}px)`;
+  }
+
+  function nextSlide() {
+    index++;
+    moveToSlide(index);
+
+    if (index === slideCount - 1) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = 1;
+        track.style.transform = `translateX(-${imageWidth * index}px)`;
+      }, 600);
+    }
+  }
+
+  function prevSlide() {
+    index--;
+    moveToSlide(index);
+
+    if (index === 0) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = slideCount - 2;
+        track.style.transform = `translateX(-${imageWidth * index}px)`;
+      }, 500);
+    }
+  }
+
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 3000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  btnLeft.addEventListener('click', () => {
+    prevSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  btnRight.addEventListener('click', () => {
+    nextSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  startAutoSlide();
+</script>
+
+
+        
+</body>
+</html>
