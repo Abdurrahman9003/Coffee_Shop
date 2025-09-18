@@ -29,7 +29,7 @@ nav {
   justify-content: center;       /* center them */
   flex-wrap: wrap;               /* allow wrap if too tight */
   background: #333;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 nav a {
@@ -408,14 +408,14 @@ footer {
 /* Extra-small devices (<576px) – tighten spacing & font */
 @media (max-width: 575.98px) {
   nav {
-    gap: 5px;
+   gap: 4px;
     padding-left: 0px;
   }
   nav a {
     font-size: 0.9rem;
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 2px;
     position: relative;
-    top: 5px;
+    top: 6px;
   }
   footer{
     position: sticky;
