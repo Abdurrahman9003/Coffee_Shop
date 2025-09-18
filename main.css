@@ -408,13 +408,14 @@ footer {
 /* Extra-small devices (<576px) – tighten spacing & font */
 @media (max-width: 575.98px) {
   nav {
-    justify-content: space-around;   /* spread them */
+    gap: 5px;
+    padding-left: 0px;
   }
   nav a {
     font-size: 0.9rem;
     padding: 0.4rem 0.5rem;
     position: relative;
-    top: 7px;
+    top: 5px;
   }
   footer{
     position: sticky;
@@ -434,7 +435,7 @@ footer {
   nav a {
     margin: 0 10px;
     position: relative;
-    top: 7px;
+    top: 5px;
   }
 
   .intro-section img {
@@ -491,7 +492,7 @@ footer {
 /* Large devices ≥992px */
 @media (min-width: 992px) {
   nav {
-    justify-content: space-around;
+    gap: 45px;
   }
 
   h1 {
